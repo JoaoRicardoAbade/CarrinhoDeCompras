@@ -1,0 +1,143 @@
+/* Estilos para a container dos produtos */
+.produtos-container {
+  display: flex; /* Usando flexbox para alinhar os itens de forma flexível */
+  flex-wrap: wrap; /* Permite que os produtos se ajustem em várias linhas se necessário */
+  justify-content: space-around; /* Distribui os produtos de forma equilibrada, com espaços ao redor */
+  gap: 20px; /* Espaçamento de 20px entre os cards de produtos */
+  margin: 20px auto; /* Adiciona uma margem de 20px na parte superior e inferior e centraliza horizontalmente */
+}
+
+/* Estilos para os cards de produtos */
+.produto-card {
+  width: 200px; /* Define a largura do card de produto */
+  border: 1px solid #ddd; /* Define uma borda fina e clara ao redor do card */
+  border-radius: 10px; /* Arredonda as bordas do card */
+  overflow: hidden; /* Impede que elementos, como imagens, ultrapassem os limites do card */
+  text-align: center; /* Centraliza o texto dentro do card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave ao redor do card */
+  padding: 10px; /* Adiciona um espaçamento interno de 10px */
+  background-color: #fff; /* Define o fundo do card como branco */
+}
+
+/* Estilos para as imagens dentro do card */
+.produto-card img {
+  max-width: 100%; /* Garante que a imagem ocupe toda a largura disponível do card */
+  height: auto; /* Mantém a proporção da imagem, ajustando a altura automaticamente */
+  border-radius: 5px; /* Arredonda as bordas da imagem */
+}
+
+/* Estilo do botão dentro do card */
+.produto-card button {
+  background-color: #28a745; /* Define a cor de fundo verde para o botão */
+  color: white; /* Define a cor do texto do botão como branco */
+  border: none; /* Remove a borda padrão do botão */
+  padding: 10px 20px; /* Adiciona um espaçamento interno de 10px vertical e 20px horizontal */
+  border-radius: 5px; /* Arredonda as bordas do botão */
+  cursor: pointer; /* Muda o cursor para indicar que é um elemento interativo */
+  font-size: 16px; /* Define o tamanho da fonte como 16px */
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave na mudança da cor de fundo */
+}
+
+/* Efeito de hover no botão */
+.produto-card button:hover {
+  background-color: #218838; /* Cor de fundo do botão muda para um tom mais escuro quando o mouse passa por cima */
+}
+
+/* Estilos para a seção do carrinho */
+.carrinho {
+  margin-top: 40px; /* Adiciona uma margem de 40px na parte superior */
+  text-align: center; /* Centraliza o texto da seção */
+}
+
+/* Estilos para a tabela do carrinho */
+#tabela-carrinho {
+  width: 100%; /* Define a largura da tabela como 100% do container */
+  margin-top: 20px; /* Adiciona uma margem de 20px no topo da tabela */
+  border-collapse: collapse; /* Remove os espaços entre as bordas das células da tabela */
+}
+
+/* Estilos para as células e cabeçalhos da tabela */
+#tabela-carrinho th, #tabela-carrinho td {
+  padding: 8px; /* Adiciona um espaçamento interno de 8px nas células */
+  border: 1px solid #ddd; /* Define uma borda leve e clara ao redor das células */
+  text-align: center; /* Centraliza o conteúdo das células */
+}
+
+/* Estilo do cabeçalho da tabela */
+#tabela-carrinho th {
+  background-color: #f4f4f4; /* Define o fundo do cabeçalho como cinza claro */
+}
+
+/* Estilos para os botões no carrinho */
+button {
+  padding: 10px 20px; /* Adiciona espaçamento interno de 10px vertical e 20px horizontal */
+  border: none; /* Remove a borda padrão do botão */
+  cursor: pointer; /* Muda o cursor para indicar interatividade */
+  border-radius: 5px; /* Arredonda as bordas do botão */
+}
+
+/* Estilo do botão de finalizar compra */
+button#finalizar-compra {
+  background-color: #007bff; /* Cor de fundo azul para o botão de finalizar */
+  color: white; /* Cor do texto como branco */
+}
+
+/* Efeito de hover no botão de finalizar compra */
+button#finalizar-compra:hover {
+  background-color: #0056b3; /* Cor de fundo mais escura quando o mouse passa por cima */
+}
+
+/* Estilo do botão de limpar carrinho */
+button#limpar-carrinho {
+  background-color: #dc3545; /* Cor de fundo vermelha para o botão de limpar carrinho */
+  color: rgb(139, 0, 0); /* Cor do texto como vermelha escura */
+}
+
+/* Efeito de hover no botão de limpar carrinho */
+button#limpar-carrinho:hover {
+  background-color: #c82333; /* Cor de fundo mais escura quando o mouse passa por cima */
+}
+
+/* Estilo do menu de navegação */
+.menu {
+  background-color: #333; /* Cor de fundo do menu como cinza escuro */
+  padding: 10px 0; /* Adiciona 10px de espaçamento vertical */
+  margin-bottom: 20px; /* Adiciona 20px de margem inferior */
+}
+
+/* Estilo da lista de itens no menu */
+.menu ul {
+  list-style-type: none; /* Remove os marcadores da lista */
+  display: flex; /* Usa flexbox para alinhar os itens horizontalmente */
+  justify-content: center; /* Centraliza os itens da lista */
+  gap: 30px; /* Define um espaçamento de 30px entre os itens */
+  margin: 0; /* Remove a margem padrão da lista */
+  padding: 0; /* Remove o preenchimento padrão da lista */
+}
+
+/* Estilo dos itens da lista do menu */
+.menu li {
+  display: inline; /* Define os itens como inline para ficarem lado a lado */
+}
+
+/* Estilo dos links no menu */
+.menu a {
+  color: white; /* Cor do texto como branco */
+  text-decoration: none; /* Remove o sublinhado dos links */
+  font-weight: bold; /* Define o texto em negrito */
+}
+
+/* Efeito de hover nos links do menu */
+.menu a:hover {
+  text-decoration: underline; /* Adiciona sublinhado quando o mouse passa sobre o link */
+}
+
+/* Estilo do rodapé */
+.footer {
+  margin-top: 40px; /* Adiciona uma margem de 40px na parte superior */
+  padding: 20px 0; /* Adiciona 20px de espaçamento vertical */
+  background-color: #cacaca; /* Cor de fundo cinza claro para o rodapé */
+  text-align: center; /* Centraliza o texto do rodapé */
+  color: #555; /* Cor do texto como cinza escuro */
+  border-top: 1px solid #ddd; /* Borda superior leve para separar o rodapé do restante */
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 (suporta acentos) -->
+  <title>Loja de Roupas</title> <!-- Título que aparece na aba do navegador -->
+  <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS externo com o estilo da página -->
+</head>
+
+<!-- Áudio de fundo da página com reprodução automática ao clicar e em loop -->
+<audio id="musica-fundo" src="Estilo É Vida.mp3" preload="auto" loop></audio>
+
+<body>
+  <!-- Menu de navegação do topo da página -->
+  <nav class="menu">
+    <ul>
+      <li><a href="#">Início</a></li>       <!-- Link para a seção inicial -->
+      <li><a href="#">Produtos</a></li>     <!-- Link para a seção de produtos -->
+      <li><a href="#">Carrinho</a></li>     <!-- Link para a seção do carrinho -->
+      <li><a href="#">Contato</a></li>      <!-- Link para a seção de contato -->
+    </ul>
+  </nav>
+
+  <h1>Loja de Roupas</h1> <!-- Título principal da página -->
+
+  <!-- Seção com os cards dos produtos -->
+  <section class="produtos-container">
+
+    <!-- Cada bloco abaixo representa um produto -->
+    <div class="produto-card">
+      <img src="https://a-static.mlcdn.com.br/1500x1500/camiseta-branca-100-poliester-para-sublimacao-unity-estamparia/unityestamparia/5b79cdfcfd5c11eba8194201ac185013/9e156263a2abdb2825976d2c68d3656d.jpeg" alt="Camiseta Branca">
+      <h3>Camiseta Branca</h3>
+      <p>R$ 39,90</p>
+      <button onclick="comprarDireto('C001')">Comprar</button> <!-- Botão de compra com ação JS -->
+    </div>
+
+    <div class="produto-card">
+      <img src="https://rivierawear.com.br/cdn/shop/files/S7818ae00b9084262835f54fff6d61f1fU.jpg?v=1688494129" alt="Calça Jeans">
+      <h3>Calça Jeans</h3>
+      <p>R$ 129,90</p>
+      <button onclick="comprarDireto('C002')">Comprar</button>
+    </div>
+
+    <div class="produto-card">
+      <img src="https://cavastastore.com.br/cdn/shop/files/1-descript-2022-outono-homens-jaqueta-de-moda-dos-homens-do-vintage-jaqueta-de-couro-ocasional-do-falso-couro-da-motocicleta-jaquetas-motociclista-ziper-bolsos-casacos.png?v=1685987897" alt="Jaqueta de Couro">
+      <h3>Jaqueta de Couro</h3>
+      <p>R$ 249,90</p>
+      <button onclick="comprarDireto('C003')">Comprar</button>
+    </div>
+
+    <div class="produto-card">
+      <img src="https://lumman.fbitsstatic.net/img/p/tenis-esportivo-adidas-masculino-preto-75615/284371.jpg?w=650&h=650&v=no-change&qs=ignore" alt="Tênis Esportivo">
+      <h3>Tênis Esportivo</h3>
+      <p>R$ 199,90</p>
+      <button onclick="comprarDireto('C004')">Comprar</button>
+    </div>
+
+    <div class="produto-card">
+      <img src="https://lojaviego.com.br/cdn/shop/files/BoneMasculinoAbaCurvaEdiko_5.webp?v=1706549781" alt="Boné Estiloso">
+      <h3>Boné Estiloso</h3>
+      <p>R$ 59,90</p>
+      <button onclick="comprarDireto('C005')">Comprar</button>
+    </div>
+  </section>
+
+  <hr> <!-- Linha horizontal de separação -->
+
+  <!-- Seção para adicionar produto via <select> -->
+  <section>
+    <h2>Adicionar via Seleção</h2>
+    <select id="selecao-produto"></select> <!-- Lista de produtos gerada dinamicamente via JS -->
+    <input type="number" id="quantidade" value="1" min="1"> <!-- Campo para inserir a quantidade desejada -->
+    <button onclick="adicionarProduto()">Adicionar ao Carrinho</button> <!-- Botão que executa função JS -->
+  </section>
+
+  <hr>
+
+  <!-- Seção que exibe o conteúdo do carrinho -->
+  <section>
+    <h2>Carrinho de Compras</h2>
+    <table id="tabela-carrinho" border="1">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Nome</th>
+          <th>Qtd</th>
+          <th>Valor Unit.</th>
+          <th>Total</th>
+          <th>Ação</th>
+        </tr>
+      </thead>
+      <tbody></tbody> <!-- Corpo da tabela será preenchido via JS -->
+    </table>
+
+    <p id="total-geral"></p> <!-- Local onde o valor total será exibido -->
+
+    <!-- Botões para finalizar ou limpar o carrinho -->
+    <button onclick="finalizarCompra()">Finalizar Compra</button>
+    <button onclick="limparCarrinho()">Limpar Carrinho</button>
+
+    <!-- Rodapé da página -->
+    <footer class="footer">
+      <p>&copy; 2025 Loja de Roupas. Todos os direitos reservados.</p>
+    </footer>
+  </section>
+
+  <!-- Script JavaScript externo -->
+  <script src="script.js"></script>
+</body>
+</html>
